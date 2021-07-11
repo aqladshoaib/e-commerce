@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+
 import './App.css';
+import HomePage from './pages/home-page/home-page.component'
+import ShopPage from './pages/shop-page/shop-page.component'
+import SneakersPage from './pages/sneakers-page/sneakers-page.component';
+import HatsPage from './pages/hats-page/hats-page.component';
+
+// attaching application with router
+import{Switch, Route} from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <Route exact path='/' component ={HomePage}/>
+    <Route path='/hats' component={HatsPage}/>  
+    <Route path='/sneakers' component={SneakersPage}/>  
+    <Route path='/clothing' component={ShopPage}/>  
+  
+   
     </div>
   );
 }
-
+ 
 export default App;
